@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router';
+import Router from 'react-router';
+
+var Link = Router.Link;
 
 class Header extends React.Component{
 

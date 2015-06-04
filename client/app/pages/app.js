@@ -1,6 +1,8 @@
 import React from 'react';
-import { RouteHandler } from 'react-router';
-import Header from '../components/header'
+import Router from 'react-router';
+import Header from '../components/header';
+
+var RouteHandler = Router.RouteHandler;
 
 class App extends React.Component {
   

@@ -1,10 +1,12 @@
 import React from 'react';
-import { Route, DefaultRoute, NotFoundRoute } from 'react-router';
+import Router from 'react-router';
 
 import App from './pages/app';
 import Home from './pages/home';
 import Info from './pages/info';
 import NotFound from './pages/notFound';
+
+let { Route, DefaultRoute, NotFoundRoute} = Router;
 
 var routes = (
   <Route name="app" path="/" handler={ App }>

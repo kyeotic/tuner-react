@@ -5,8 +5,8 @@ import ItemActions from '../actions/itemActions';
 
 class Home extends React.Component {
   
-  constructor(props){
-    super(props);
+  constructor(){
+    super();
     this.state = {
       items : [],
       loading: false
