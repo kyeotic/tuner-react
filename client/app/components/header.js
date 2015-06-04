@@ -10,7 +10,7 @@ class Header extends React.Component{
   }
 
   render() {
-    var items = this.props.routes.map(item => <li><Link to={ item.route} activeClassName="active">{ item.title }</Link></li>);
+    var items = this.props.routes.map(item => <li key={ item.route}><Link to={ item.route} activeClassName="active">{ item.title }</Link></li>);
 
     return (
       <header className="nav navbar navbar-default navbar-fixed-top" role="banner">

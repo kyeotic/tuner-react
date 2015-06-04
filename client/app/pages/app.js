@@ -1,6 +1,6 @@
 import React from 'react';
 import Router from 'react-router';
-import Header from '../components/header';
+import Header from 'components/header';
 
 var RouteHandler = Router.RouteHandler;
 
@@ -8,8 +8,7 @@ class App extends React.Component {
   
   render() {
     var routes = [
-      { route: 'home',      title: 'Home'},
-      { route: 'info',      title: 'Info'}
+      { route: 'home',      title: 'Home'}
     ];
     return (
       <div>

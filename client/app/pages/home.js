@@ -1,7 +1,7 @@
 import React from 'react';
-import ItemList from '../components/itemList';
+import ItemList from 'components/itemList';
 import ItemStore from '../stores/itemStore';
-import ItemActions from '../actions/itemActions';
+import SpotifySearch from 'components/spotifySearch';
 
 class Home extends React.Component {
   
@@ -15,7 +15,6 @@ class Home extends React.Component {
 
   componentDidMount() {
     this.unsubscribe = ItemStore.listen(this.onStatusChange.bind(this));
-    ItemActions.loadItems();
   }
 
   componentWillUnmount() {
@@ -31,7 +30,7 @@ class Home extends React.Component {
     return (
       <div>
         <h1>Home Area</h1>
-        <ItemList { ...this.state } />
+        <SpotifySearch />
       </div>
     );
   }
