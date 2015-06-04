@@ -10,18 +10,18 @@ class Header extends React.Component{
   }
 
   render() {
-    return (
-      <header className="clearfix">
-        Application Name
+    var items = this.props.routes.map(item => <li><Link to={ item.route} activeClassName="active">{ item.title }</Link></li>);
 
-        <nav className="clearfix">
-          <div className="nav-item">
-            <Link to="home">Home</Link>
-          </div>
-          <div className="nav-item">
-            <Link to="info">Info</Link>
-          </div>
-        </nav>
+    return (
+      <header className="nav navbar navbar-default navbar-fixed-top" role="banner">
+        <div className="">
+          <nav role="navigation">
+            <Link className="brand navbar-brand" to={ this.props.routes[0].route}><i className="fa fa-home"></i></Link>
+            <ul className="nav navbar-nav">
+               { items}
+            </ul>
+          </nav>
+        </div>
       </header>
     );
   }

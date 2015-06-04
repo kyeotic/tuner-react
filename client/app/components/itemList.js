@@ -2,8 +2,8 @@ import React from 'react';
 
 class ItemList extends React.Component {
   
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
   }
 
   render() {

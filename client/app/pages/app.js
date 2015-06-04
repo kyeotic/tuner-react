@@ -7,9 +7,13 @@ var RouteHandler = Router.RouteHandler;
 class App extends React.Component {
   
   render() {
+    var routes = [
+      { route: 'home',      title: 'Home'},
+      { route: 'info',      title: 'Info'}
+    ];
     return (
       <div>
-        <Header />
+        <Header routes={routes} />
         <div className="content">
           <RouteHandler/>
         </div>
